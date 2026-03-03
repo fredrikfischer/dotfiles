@@ -1,6 +1,21 @@
+# zsh config
+
+# Interactive comments
+setopt interactive_comments
+
 # Enable command auto-completion
 autoload -Uz compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
 compinit
+zmodload zsh/complist
+
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
 
 # Enable command history
 HISTFILE=~/.zsh_history
@@ -18,6 +33,7 @@ alias grep='grep --color=auto'
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
+alias vim='nvim'
 
 # Set default editor
 export EDITOR=vim
@@ -54,3 +70,6 @@ zle -N zle-line-finish
 
 # Removes ESC lag
 KEYTIMEOUT=1
+
+
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
