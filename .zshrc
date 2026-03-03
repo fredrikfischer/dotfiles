@@ -25,7 +25,7 @@ export EDITOR=vim
 # Add user bin to PATH
 export PATH="$HOME/bin:$PATH"
 
-# vim keybindings
+# Vim keybindings
 bindkey -v
 
 function zle-keymap-select {
