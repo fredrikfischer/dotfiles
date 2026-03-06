@@ -16,7 +16,13 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
+
+# Rebind some keys 
 bindkey -v '^?' backward-delete-char
+bindkey "^[[1;5C" forward-word
+bindkey "^L" forward-word
+bindkey "^H" backward-word
+bindkey "^[[1;5D" backward-word
 
 # Enable command history
 HISTFILE=~/.zsh_history
@@ -35,6 +41,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias vim='nvim'
+alias v='nvim'
 
 # Set default editor
 export EDITOR=vim
@@ -45,6 +52,7 @@ export PATH="$HOME/bin:$PATH"
 # Vim keybindings
 bindkey -v
 
+# Functions for changing cursor shape based on vim-mode (insert/normal)
 function zle-keymap-select {
   if [[ $KEYMAP == vicmd ]]; then
     # Normal mode: block cursor
