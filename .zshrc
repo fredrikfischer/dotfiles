@@ -46,8 +46,9 @@ alias v='nvim'
 # Set default editor
 export EDITOR=vim
 
-# Add user bin to PATH
+# Add user bin and go to PATH
 export PATH="$HOME/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
 
 # Vim keybindings
 bindkey -v
