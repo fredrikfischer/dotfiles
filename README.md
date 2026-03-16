@@ -2,8 +2,10 @@
 
 Some dot and config files I use for my system
 
-`
-ln -s .zshrc ~/
-ln -s foot ~/.config
-ln -s bin ~/.local
-`
+Symbolic links:  
+```
+ln -s .zshrc ~/.zshrc
+ln -s foot ~/.config/
+ln -s bin ~/.local/
+ln -s autostart ~/config/
+```
