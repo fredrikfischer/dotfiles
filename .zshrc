@@ -42,6 +42,8 @@ alias la='ls -a'
 alias lla='ls -la'
 alias vim='nvim'
 alias v='nvim'
+alias n='nnn'
+
 
 # Set default editor
 export EDITOR=vim
